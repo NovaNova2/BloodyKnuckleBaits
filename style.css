@@ -5,7 +5,8 @@ html, body {
     background-color: black;
     color: rgb(110, 165, 29);
     font-family: 'Oswald', sans-serif;
-    overflow: hidden;
+   /* overflow: hidden; */
+   overflow-x: hidden;
  }
 
  a {
@@ -22,10 +23,11 @@ html, body {
 }
 
 .glow{
+    background-color: transparent;
     pointer-events: none;
-    height: 10px;
-    width: 10px;
-    box-shadow: 0 0 50vw 50vw rgba(50,205,50,0.05);
+    height: 0px;
+    width: 0px;
+    box-shadow: 0 0 50vw 40vw rgba(50,205,50,0.08);
 }
 #bl{
     position: absolute;
@@ -36,6 +38,7 @@ html, body {
     position: absolute;
     top: 8vh;
     right: 0;
+    box-shadow: 0 0 50vw 40vw rgba(0, 162, 255, 0.08);
 }
 /*NAVBAR*/
 #navDiv{
@@ -56,8 +59,43 @@ nav, #navList{
 .navListItem a{
     font-size: x-large;
 }
-/*NAVBAR*/
 
+.navLink {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0;
+  }
+  
+  .navLink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #00ff88;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover underline slide in */
+  .navLink:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* Active page underline stays (unless hovering nav) */
+  .navLink.active::after {
+    transform: scaleX(1);
+  }
+  
+  /* While hovering any item, hide the active one temporarily */
+  #navList:hover .navLink.active::after {
+    transform: scaleX(0);
+  }
+/*NAVBAR*/
+/*MAIN*/
 #mainDiv{
     display: flex;
     align-items: center;
@@ -65,7 +103,7 @@ nav, #navList{
     height: 92vh;
     width: 100%;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 #homeScreenContainer{
@@ -88,7 +126,7 @@ nav, #navList{
     font-size: 1.8rem;
 }
 
-#aboutUsHeader {
+#aboutUsHeader, .MainHeaders {
     margin: 0;
     font-size: 5rem;
 }
@@ -99,3 +137,48 @@ nav, #navList{
     height: 40vh;
     width: 40vh;
 }
+
+#greenLine {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(146, 230, 21);
+    width: 100vw;
+    height: .4vh;
+    box-shadow: 0 0 5vh .1vh;
+}
+/*MAIN*/
+/*SHOWCASE*/
+#productShowcaseDiv {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(12, 22, 53, 0.171);
+}
+
+#showcaseContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+#productHeader {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+#exploreButton {
+    height: 4vh;
+    width: 25vw;
+    border: 0;
+    background-color: rgb(102, 151, 29);
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+#exploreButton a {
+    font-family: 'Oswald', sans-serif;
+    font-size: x-large;
+}
+/*SHOWCASE*/

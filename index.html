@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloody Knuckle Baits</title>
+    <title>Bloody Knuckle Baits | Handcrafted Fishing Lures</title>
+
+    <meta name="description" content="Discover Bloody Knuckle Baits : premium, handcrafted fishing lures built for serious anglers. Designed for performance and precision." />
+    <meta name="keywords" content="fishing lures, custom baits, handcrafted baits, Bloody Knuckle Baits" />
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
@@ -13,10 +16,10 @@
         <div id="navDiv" class="containerDiv">
             <nav id="mainNav">
                 <ul id="navList">
-                    <li class="navListItem" id="homeNav"><a href="index.html">HOME</a></li>
-                    <li class="navListItem" id="productsNav"><a href="index.html">PRODUCTS</a></li>
-                    <li class="navListItem" id="contactNav"><a href="index.html">CONTACT US</a></li>
-                </ul>
+                    <li class="navListItem"><a href="index.html" class="navLink active">HOME</a></li>
+                    <li class="navListItem"><a href="products.html" class="navLink">PRODUCTS</a></li>
+                    <li class="navListItem"><a href="contact.html" class="navLink">CONTACT US</a></li>
+                  </ul>
             </nav>
         </div>
     </header>
@@ -26,16 +29,26 @@
         <div class="glow" id="bl"></div>
         <div class="glow" id="tr"></div>
         <div id="homeScreenContainer">
-            <img src="PlaceholderImage.png" alt="Bloody Knuckle Baits Product" id="homeImage">
+            <img src="BloodyKnuckle.png" alt="Bloody Knuckle Baits Product" id="homeImage">
             <div id="mainTextContainer">
-                <h1 id="aboutUsHeader" class="aboutUsP">ABOUT US</h1>
+                <h1 id="aboutUsHeader" class="MainHeaders">ABOUT US</h1>
                 <p id="aboutUsText" class="aboutUsP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae hic sed explicabo enim quaerat ipsa, nisi nihil incidunt neque quod? Molestiae nisi saepe eum impedit unde inventore ut ipsa officia!</p>
             </div>
         </div>
-    </main>
-    <footer>
         <div id="greenLine"></div>
-    </footer>
+    </main>
     <!--MAIN-->
+    <!--PRODUCTS-->
+    <div class="containerDiv" id="productShowcaseDiv">
+        <h1 class="MainHeaders" id="productHeader">OUR PRODUCTS</h1>
+        <div id="showcaseContainer" class="containerDiv">
+            <img class="productShowcaseImage" src="PlaceholderImage.png"> 
+            <img class="productShowcaseImage" src="PlaceholderImage.png"> 
+            <img class="productShowcaseImage" src="PlaceholderImage.png"> 
+            <img class="productShowcaseImage" src="PlaceholderImage.png"> 
+        </div>
+        <button id="exploreButton"><a href="">EXPLORE OUR PRODUCTS</a></button>
+    </div>
+    <!--PRODUCTS-->
 </body>
 </html>
